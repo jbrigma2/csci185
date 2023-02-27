@@ -1,0 +1,65 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    background-color:#4EDEA9 ;
+  
+}
+
+main, header > div {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.Work{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+}
+
+.my-work > section {
+    margin: 0vh 0;
+    /* border: dashed #CCC 2px; */
+    background: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+}
+.my-work h2 {
+    margin-bottom: 20px;
+}
+
+#Lectures {
+    background-color: #4EC3DE;
+}
+
+#homework{
+    background-color: #58B1FA;
+}
+
+#tutorials{
+    background-color:#62F5E9 ;
+    
+}
+
+
+
+
+
+
+
+
+
+
