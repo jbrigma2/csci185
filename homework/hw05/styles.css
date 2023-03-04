@@ -10,4 +10,122 @@ body {
     margin: 0;
 }
 
-/* Your CSS Code Here! */
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+#title{
+    font-family: "Silkscreen", serif;
+}
+header{
+    color: white;
+    text-align: center;
+    background-color:rgb(160, 17, 17);
+    padding: 20px;
+}
+ul{
+    text-align:right;
+    list-style: none;
+}
+li{
+    display:inline;
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#profile-pic{
+    border-radius: 100px;
+}
+#about{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    justify-content: left;
+    padding: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.project-holder{
+    background-color: lightgrey;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: left;
+   
+}
+#projects{
+    background-color: lightgrey;
+     padding:100px;
+}
+#p{
+    justify-content: flex-end;
+}
+.contact-details{
+    display: grid;
+    height: 50vh;
+    grid-template-columns: 1fr 1fr;
+    justify-content: left;
+    padding: 15px;
+    color:rgb(80, 79, 79);
+    
+}
+
+#contact-info{
+    grid-column-start: 2;
+    
+}
+#contact{
+    margin-left: 50px;
+    margin-right: 50px;
+    padding:100px;
+}
+#name{
+    background-color: rgb(242, 242, 242);
+    padding: 10px;
+    border-radius: 5px;
+    border-color: rgb(242, 242, 242);
+    width: 150px;
+    
+}
+#email{
+    background-color: rgb(242, 242, 242);
+    padding: 10px;
+    border-radius: 5px;
+    border-color: rgb(242, 242, 242);
+    margin-left: 7px;
+    width:250px;
+    
+ 
+}
+#message{
+    background-color: rgb(242, 242, 242);
+    padding: 10px;
+    border-radius: 5px;
+    border-color: rgb(242, 242, 242);
+    margin-top: 20px;
+    width: 410px;
+    
+}
+#submit{
+    background-color: rgb(2, 175, 103);
+    padding: 10px;
+    border-radius: 5px;
+    border-color:rgb(2, 175, 103);
+    margin-top: 10px;
+    color: white;
+}
+footer{
+    background-color: lightgray;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+
+}
