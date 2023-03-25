@@ -1,17 +1,26 @@
 function defaultTheme() {
     // your code here.
+    document.querySelector("h1").innerText ="Default Theme";
+    document.querySelector("body").className ="default";
 }
 
 function oceanTheme() {
    // your code here.
+   document.querySelector("h1").innerText ="Desert Theme";
+   document.querySelector("body").className ="desert";
+   
 }
 
 function desertTheme() {
    // your code here.
+   document.querySelector("h1").innerText =" Ocean Theme";
+   document.querySelector("body").className ="ocean";
 }
 
 function highContrastTheme() {
     // your code here.
+    document.querySelector("h1").innerText ="High Contrast Theme";
+    document.querySelector("body").className ="high-contrast ";
 }
 
 /*

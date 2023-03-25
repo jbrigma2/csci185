@@ -1,9 +1,15 @@
-function makeBigger() {
-   alert('make bigger!');
+const makeBigger = () => {
+   // alert('make bigger!');
+   console.log('makeBigger');
+   document.querySelector('div').style.fontSize="35px";
+   document.querySelector('h1').style.fontSize= "35px";
 };
 
-function makeSmaller() {
-   alert('make smaller!');
+const makeSmaller = () => {
+   // alert('make smaller!');
+   document.querySelector('div').style.fontSize="20px";
+   document.querySelector('h1').style.fontSize="20px";
+
 };
 
 /*
