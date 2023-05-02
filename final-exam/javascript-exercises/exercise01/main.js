@@ -1,5 +1,6 @@
 function color1() {
     // target the element with the id of square1
+    querySelector()
     // and change its background color...
 }
 
