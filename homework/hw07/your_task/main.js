@@ -72,12 +72,51 @@ async function getAlbums (term) {
     });
 }
 
+
 async function getArtist (term) {
-    console.log(`
-        get artists from spotify based on the search term
-        "${term}" and load the first artist into the #artist section 
-        of the DOM...`);
-};
+   const url = `https://www.apitutor.org/spotify/simple/v1/search?type=album&q=${term}`;
+    const data = await fetch (url).then(response=> response.json());
+   // console.log(data);
+   const artist = data[0];
+   const template = `
+   <section class ="artist-card" id="${data[0].id}">
+   <div>
+   <img src="${data [0].image_url}" alt="${data [0].name} profile picture">
+   <h2>${data[0].name}</h2>
+   <div class="footer">
+   <a href="${data[0].spotify_url}" target="_blank
+   view on spotify 
+   </a>
+   </div>
+   </div>
+   </section>
+   `
+;
+document.querySelector('#artist').innerHTML = template;
+}
+
+function loadTrack(trackId){
+
+    const iframe= document.childElement('iframe');
+    iframe.src= `https://open.spotify.com/embed/track${trackId}`;
+    iframe.width = '100%';
+    iframe.height= 352;
+    iframe.frameBorder = 0;
+    iframe.allowFullscreen = true;
+    iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+    iframe.loading = 'lazy';
+
+
+    const artistSection = document.querySelector('#artist');
+    artistSection.innerHTML = '';
+
+
+    artistSection.appendChild(iframe);
+
+
+    const artistSectionTitle = document.querySelector('#artist-section h1');
+    artistSectionTitle.innerHTML = 'Now Playing';
+}
 
 
 document.querySelector('#search').onkeyup = function (ev) {
