@@ -13,34 +13,39 @@ const photos = [
 let idx = 0;
 
 
-/* This function should:
-    (1) display the new image inside of the .current-photo container, and 
-    (2) update the caption inside of the .caption paragraph
-*/
+const imgElement= document.querySelector('.current-photo img');
+const captionElement= document.querySelector('.caption');
+
 function showImage() {
-    console.log('Show image');
+
+imgElement.src = photos[idx];
+
+captionElement.textContent = `Image ${idx + 1} of 10`;  
 }
 
-
-/* This function should set the idx variable 
-   to one greater than the current value of idx, 
-   and then invoke the showImage() function.
-   If the idx gets to one less than the length of 
-   the array, set idx to 0.
-*/
 function forward() {
     console.log('forward');
-    ++idx;
+    idx++;
+
+    if (idx >= photos.length){
+        idx = 0;
+    }
+   
     showImage();
 }
 
-
-/* This function should set the idx variable 
-   to one less than the current value of idx, 
-   and then invoke the showImage() function.
-   If the idx gets to the beginning, set idx to
-   one less than the length of the array.
-*/
 function back() {
     console.log('back');
+    idx--;
+    
+    if(idx<0){
+        idx = photos.length - 1;
+    }
+   
+    showImage();
 }
+
+showImage();
+
+document.querySelector('.carousel .btn-next').addEventListener('click',forward);
+document.querySelector('.carousel .btn-prev').addEventListener('click',back);
